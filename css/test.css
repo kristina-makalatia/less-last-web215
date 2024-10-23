@@ -1,0 +1,48 @@
+/* test styles*/
+body,
+html {
+  height: 100%;
+}
+
+.grid-new {
+  display: grid;
+  height: 100%;
+  gap: 20px;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: 100px 1fr 100px;
+  grid-template-areas:
+    "header-element header-element"
+    "aside-element  main-element"
+    "footer-element footer-element";
+}
+.header {
+  grid-area: header-element;
+  background-color: lightgrey;
+}
+.main {
+  grid-area: main-element;
+  background-color: lightgrey;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+.main-item {
+  display: grid;
+  place-items: center;
+  /* align-items: center; */
+  /* justify-items: center; */
+}
+.aside {
+  grid-area: aside-element;
+  background-color: lightgrey;
+}
+.footer {
+  grid-area: footer-element;
+  background-color: lightgrey;
+}
+.main-item {
+  border: 1px solid darkgreen;
+  /* display: grid;
+    
+    place-items: center; */
+}
